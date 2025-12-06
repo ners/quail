@@ -1,0 +1,63 @@
+cabal-version: 3.0
+name: haxl-effectful
+version: 0.1.0.0
+synopsis: Haxl effect for Effectful
+homepage: https://github.com/ners/quail/blob/main/README.md
+license: Apache-2.0
+author: ners
+maintainer: ners@gmx.ch
+bug-reports: https://github.com/ners/quail/issues
+category: System
+build-type: Simple
+extra-source-files:
+  README.md
+
+source-repository head
+  type: git
+  location: https://github.com/ners/quail
+
+common common
+  default-language: GHC2021
+  ghc-options:
+    -Weverything
+    -Wno-unsafe
+    -Wno-all-missed-specialisations
+    -Wno-missing-export-lists
+    -Wno-missing-import-lists
+    -Wno-missing-kind-signatures
+    -Wno-missing-poly-kind-signatures
+    -Wno-missing-role-annotations
+    -Wno-missing-safe-haskell-mode
+    -Wno-name-shadowing
+
+  default-extensions:
+    ApplicativeDo
+    BlockArguments
+    DataKinds
+    DefaultSignatures
+    DeriveAnyClass
+    DeriveGeneric
+    DerivingStrategies
+    DerivingVia
+    ExplicitNamespaces
+    LambdaCase
+    NoImplicitPrelude
+    OverloadedLabels
+    OverloadedRecordDot
+    OverloadedStrings
+    RecordWildCards
+    RecursiveDo
+    TemplateHaskell
+    TypeFamilies
+    ViewPatterns
+
+library
+  import: common
+  hs-source-dirs: src
+  build-depends:
+    base,
+    effectful,
+    haxl,
+
+  exposed-modules:
+    Effectful.Haxl

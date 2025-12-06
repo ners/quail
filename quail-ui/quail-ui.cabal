@@ -1,0 +1,95 @@
+cabal-version: 3.0
+name: quail-ui
+version: 0.1.0.0
+synopsis: Quail frontend
+homepage: https://github.com/ners/quail/blob/main/README.md
+license: Apache-2.0
+author: ners
+maintainer: ners@gmx.ch
+bug-reports: https://github.com/ners/quail/issues
+category: System
+build-type: Simple
+extra-source-files:
+  README.md
+
+source-repository head
+  type: git
+  location: https://github.com/ners/quail
+
+common wasm
+  if arch(wasm32)
+    ghc-options:
+      -no-hs-main
+      -optl-mexec-model=reactor
+      "-optl-Wl,--export=hs_start"
+
+    cpp-options:
+      -DWASM
+
+common common
+  default-language: GHC2021
+  -- ghc-options:
+  --   -Weverything
+  --   -Wno-unsafe
+  --   -Wno-all-missed-specialisations
+  --   -Wno-missing-export-lists
+  --   -Wno-missing-import-lists
+  --   -Wno-missing-kind-signatures
+  --   -Wno-missing-poly-kind-signatures
+  --   -Wno-missing-role-annotations
+  --   -Wno-missing-safe-haskell-mode
+  --   -Wno-name-shadowing
+  --   -Wno-undef
+  default-extensions:
+    ApplicativeDo
+    BlockArguments
+    DataKinds
+    DefaultSignatures
+    DeriveAnyClass
+    DeriveGeneric
+    DerivingStrategies
+    DerivingVia
+    ExplicitNamespaces
+    LambdaCase
+    NoImplicitPrelude
+    OverloadedLabels
+    OverloadedRecordDot
+    OverloadedStrings
+    RecordWildCards
+    RecursiveDo
+    TemplateHaskell
+    TypeFamilies
+    ViewPatterns
+
+executable quail-ui
+  import: wasm, common
+  hs-source-dirs: app
+  main-is: Main.hs
+  other-modules:
+    Quail.Run
+
+  if arch(wasm32)
+    build-depends:
+      jsaddle-wasm
+
+  if !arch(wasm32)
+    build-depends:
+      dir-traverse,
+      fast-logger,
+      jsaddle-warp,
+      unordered-containers,
+      wai,
+      wai-extra,
+      wai-middleware-static,
+      warp,
+      websockets,
+  build-depends:
+    base,
+    bytestring,
+    dashi,
+    generic-lens,
+    jsaddle,
+    lens,
+    miso,
+    text,
+    web-font-mdi,

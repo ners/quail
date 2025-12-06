@@ -1,0 +1,14 @@
+.direnv
+.envrc
+dist-newstyle
+result
+result-*
+*.db
+
+*.css
+*.ico
+*.js
+*.png
+*.woff2
+browser_wasi_shim
+index.html

@@ -1,0 +1,2058 @@
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00000315s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.0000024s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000342s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000208s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.000002s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00000278s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00000425s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000213s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000355s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00000247s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00000329s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000209s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000157s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000157s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00000276s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.0000036s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000334s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.0000036s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000281s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00000435s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00000957s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000633s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.000003s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000703s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.0000057s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000481s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00000468s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00000762s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000675s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000204s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000936s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000938s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000473s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00000475s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00000697s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000633s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000296s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000475s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000646s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000477s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00000214s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00000342s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000232s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000208s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.0000022s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00000239s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00000537s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000219s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000178s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000202s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00000295s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.0000029s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000218s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000218s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000157s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00001157s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000017131s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001805s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000747s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000022981s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00002407s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00002195s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00001013s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000015261s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001866s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001636s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00002914s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000021181s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001013s
+
+[33mPOST[0m /reload/3215756344552254850
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 115.331777505s
+
+[33mPOST[0m /reload/691566195733818035
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 115.632295152s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000012181s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000014091s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00002342s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000733s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.0000382s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000043851s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001501s
+
+[33mPOST[0m /reload/-5328127132695176127
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 9.846193544s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.0000127s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00001632s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000011221s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00002546s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000626s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00001727s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000913s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000070911s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00002717s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000018651s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001435s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000858s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000726s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000716s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000069951s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00005344s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00002627s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001584s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[31m403 Forbidden[0m 0.000016861s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001864s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001239s
+
+[33mPOST[0m /reload/-4223749953860307880
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 16.275270463s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00001615s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00002341s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00003402s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001695s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[31m403 Forbidden[0m 0.00003504s
+
+[33mPOST[0m /reload/-1643703358540798067
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 16.579171472s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00001566s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.0000199s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00002919s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001108s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001598s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001324s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000896s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00001629s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00002602s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.0000207s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001105s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001569s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.000014741s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000935s
+
+[33mPOST[0m /reload/-6477062725786232783
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 38.064833925s
+
+[33mPOST[0m /reload/4691692318586857934
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 43.284012441s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.0000203s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.0000347s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00002221s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00000925s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[31m403 Forbidden[0m 0.00002019s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001348s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.0000094s
+
+[33mPOST[0m /reload/-4901839731674065306
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 9.840749216s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00001572s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00001933s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000022781s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001542s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001537s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.000014501s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.0000058s
+
+[33mPOST[0m /reload/310418839132288150
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 20.569081308s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00002275s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00001559s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001989s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001929s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001238s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000090691s
+
+jsaddle.js[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000102951s
+
+.well-known/appspecific/com.chrome.devtools.json[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000107461s
+
+favicon.ico[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.000118281s
+
+static/style.css[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[31m403 Forbidden[0m 0.00006668s
+
+static/icon.svg[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.000075201s
+
+favicon.ico[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[31m403 Forbidden[0m 0.000076691s
+
+[33mPOST[0m /reload/1060126822132668111
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 13.685006988s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000085441s
+
+jsaddle.js[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000103531s
+
+.well-known/appspecific/com.chrome.devtools.json[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000111021s
+
+favicon.ico[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000090221s
+
+static/style.css[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000072641s
+
+[33mPOST[0m /reload/-9110990741914701803
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 15.422841395s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000012101s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00001889s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000018091s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000027401s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003784s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000051061s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00004246s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00001214s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00001484s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.0000238s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003322s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00005497s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00004885s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00002793s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.0000174s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00001817s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000975309s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000034381s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00003759s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000023661s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003077s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.000018841s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00002323s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.000021221s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000039661s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00002721s
+
+[33mPOST[0m /reload/-2251917822878584182
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 66.182367135s
+
+[33mPOST[0m /reload/-3089857222402333180
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 71.19631107s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001779s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003602s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001559s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001895s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003803s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001535s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.000018451s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003785s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001579s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001746s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003668s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001636s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001983s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00005132s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000025231s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.00002042s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000046771s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00002209s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001889s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003541s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00002106s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001939s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000021721s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000039621s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.0000194s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00002172s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00002731s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.00002051s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000040321s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001922s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001774s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000040461s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000014061s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001934s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000020701s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00002717s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.000020651s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00002848s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00004717s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.000019051s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001846s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000059291s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000051781s
+
+[36mGET[0m /static/index.js
+[37m  Params: [0m[("v","0")]
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000042011s
+
+[36mGET[0m /static/browser_wasi_shim/index.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000084161s
+
+[36mGET[0m /static/ghc_wasm_jsffi.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000025761s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.00001815s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.0000368s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.000037191s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00005727s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000041341s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.000038681s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00004386s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003327s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.0000409s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00004291s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003794s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.000031851s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00004741s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003914s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00003954s
+
+[36mGET[0m /static/index.js
+[37m  Params: [0m[("v","0")]
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00003376s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000049681s
+
+[36mGET[0m /static/browser_wasi_shim/index.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00005043s
+
+[36mGET[0m /static/ghc_wasm_jsffi.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000025031s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003569s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00004717s
+
+[36mGET[0m /static/index.js
+[37m  Params: [0m[("v","0")]
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00003415s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000037351s
+
+[36mGET[0m /static/browser_wasi_shim/index.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000037881s
+
+[36mGET[0m /static/ghc_wasm_jsffi.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00001136s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00001466s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000061391s
+
+[36mGET[0m /static/index.js
+[37m  Params: [0m[("v","0")]
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00003844s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.00003836s
+
+[36mGET[0m /static/browser_wasi_shim/index.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000037261s
+
+[36mGET[0m /static/ghc_wasm_jsffi.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000016431s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.0000212s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00004036s
+
+[36mGET[0m /static/index.js
+[37m  Params: [0m[("v","0")]
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000057161s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.00003174s
+
+[36mGET[0m /static/browser_wasi_shim/index.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00003035s
+
+[36mGET[0m /static/ghc_wasm_jsffi.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00001115s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00001244s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000040001s
+
+[36mGET[0m /static/index.js
+[37m  Params: [0m[("v","0")]
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00003337s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.00004218s
+
+[36mGET[0m /static/browser_wasi_shim/index.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000048671s
+
+[36mGET[0m /static/ghc_wasm_jsffi.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00001764s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00001917s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.000042771s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000046401s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000048381s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.000058931s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000069101s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.0000409s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.00004188s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000046931s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000046141s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.0000396s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00007476s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000030341s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.0000379s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003106s
+
+[33mPOST[0m /reload/2442245570344753893
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 11.692073206s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00003086s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000036251s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.0000415s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000032071s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000041791s
+
+[33mPOST[0m /reload/1568477951295389971
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 16.356346671s
+
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000076601s
+
+jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000119952s
+
+.well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000094572s
+
+static/style.css
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000100021s
+
+favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000074611s
+
+static/icon.svg
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000110231s
+
+favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000086461s
+
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000107962s
+
+jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000097172s
+
+.well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000086141s
+
+favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000157523s
+
+static/style.css
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000067111s
+
+static/icon.svg
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000077221s
+
+favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000063011s
+
+foo
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.000130062s
+
+.well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000132492s
+
+[33mPOST[0m /reload/-6431722208018910129
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 76.325070803s
+
+[33mPOST[0m /reload/163278570252709234
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 84.360077688s
+
+foo
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.000143352s
+
+favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000134542s
+
+.well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.000099111s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.00003014s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003922s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.0000191s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001901s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000037011s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00002s
+
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001927s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003417s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001579s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00001345s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.0000165s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[31m403 Forbidden[0m 0.00001764s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000023271s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003351s
+
+[33mPOST[0m /reload/2143354360652231266
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 273.958322428s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000043801s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000023261s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000024601s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000049151s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.00002971s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00002486s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000036761s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003773s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.00001815s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00003665s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00002856s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003752s
+
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.00002815s
+
+non-static file /
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000112911s
+
+non-static file /jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000130092s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003842s
+
+non-static file /.well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000104851s
+
+non-static file /
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000117332s
+
+non-static file /jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000117831s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00003006s
+
+non-static file /.well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000066331s
+
+non-static file /
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000121971s
+
+non-static file /jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000102612s
+
+non-static file /.well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000214162s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000034021s
+
+non-static file: 
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000122661s
+
+non-static file: jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000084711s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000032201s
+
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000110761s
+
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.00005647s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00005359s
+
+non-static file: reload/1647700886017245257
+[33mPOST[0m /reload/1647700886017245257
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m403 Forbidden[0m 0.000083751s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000040001s
+
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000155111s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00001565s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00001711s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000061061s
+
+non-static file: foo
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000140172s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00004753s
+
+non-static file: reload/545318992778702149
+[33mPOST[0m /reload/545318992778702149
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m403 Forbidden[0m 0.000103051s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00002246s
+
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.00007414s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00001665s
+
+non-static file: foo
+[36mGET[0m /foo
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000129921s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000056661s
+
+non-static file: reload/629702682851509007
+[33mPOST[0m /reload/629702682851509007
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m403 Forbidden[0m 0.000168872s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00002119s
+
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000141041s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00001924s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00001858s
+
+non-static file: foo/bar
+[36mGET[0m /foo/bar
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000132482s
+
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00005815s
+
+non-static file: reload/5757107966843420489
+[33mPOST[0m /reload/5757107966843420489
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m403 Forbidden[0m 0.000806879s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00001992s
+
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000068s
+
+non-static file: foo/bar
+[36mGET[0m /foo/bar
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000178082s
+
+built-in file: jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000127231s
+
+non-static file: reload/-7929646506663453126
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00002047s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00001366s
+
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000114182s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000015291s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000023371s
+
+non-static file: foo/bar
+[36mGET[0m /foo/bar
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000117121s
+
+built-in file: jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000122312s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00002126s
+
+non-static file: reload/800926665939938463
+[33mPOST[0m /reload/800926665939938463
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m403 Forbidden[0m 0.000065891s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00001383s
+
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000108091s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000041981s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.0000255s
+
+non-static file: foo/bar
+[36mGET[0m /foo/bar
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000196722s
+
+built-in file: jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000111081s
+
+non-static file: reload/6416683846386646407
+[33mPOST[0m /reload/6416683846386646407
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m403 Forbidden[0m 0.000202713s
+
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00002039s
+
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000098861s
+
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00001477s
+
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00001715s
+
+non-static file: foo/bar
+[36mGET[0m /foo/bar
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000164501s
+
+built-in file: jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000187822s
+
+non-static file: reload/1365184258009788076
+[33mPOST[0m /reload/1365184258009788076
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m403 Forbidden[0m 0.000090871s
+
+static file: static/style.css
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000076191s
+
+static file: favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000119222s
+
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000130561s
+
+static file: static/icon.svg
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000148132s
+
+static file: favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000122311s
+
+non-static file: foo/bar
+[36mGET[0m /foo/bar
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000127321s
+
+built-in file: jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000117872s
+
+non-static file: reload/-3749490294388035547
+[33mPOST[0m /reload/-3749490294388035547
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m403 Forbidden[0m 0.000103361s
+
+static file: favicon.ico
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000114232s
+
+static file: static/style.css
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000095231s
+
+static file: static/icon.svg
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000173921s
+
+static file: favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000102101s
+
+non-static file: foo/bar
+[36mGET[0m /foo/bar
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000153182s
+
+built-in file: jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000129091s
+
+non-static file: reload/2869037656575284527
+static file: favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000147392s
+
+static file: static/style.css
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00003232s
+
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.00006754s
+
+static file: static/icon.svg
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000059621s
+
+static file: favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000074311s
+
+non-static file: foo/bar
+[36mGET[0m /foo/bar
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000118862s
+
+built-in file: jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000136461s
+
+non-static file: reload/-5881475333847176119
+static file: favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000203062s
+
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000071151s
+
+static file: static/style.css
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000074111s
+
+static file: static/icon.svg
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000158401s
+
+static file: favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000073691s
+
+non-static file: foo/bar
+[36mGET[0m /foo/bar
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000142091s
+
+built-in file: jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000131861s
+
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000166382s
+
+static file: favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000075421s
+
+static file: static/style.css
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00003656s
+
+static file: static/icon.svg
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000145282s
+
+static file: favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000118271s
+
+non-static file: foo/bar
+[36mGET[0m /foo/bar
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000136332s
+
+built-in file: jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000122392s
+
+non-static file: reload/-8794753696715077253
+[33mPOST[0m /reload/-8794753696715077253
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m403 Forbidden[0m 0.000238263s
+
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000086871s
+
+static file: static/style.css
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000056251s
+
+static file: static/icon.svg
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000084901s
+
+static file: favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000067181s
+
+non-static file: foo/bar
+[36mGET[0m /foo/bar
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000137082s
+
+built-in file: jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000116321s
+
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000202882s
+
+static file: favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000144131s
+
+non-static file: reload/1842903227941983593
+[33mPOST[0m /reload/1842903227941983593
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m403 Forbidden[0m 0.000052381s
+
+static file: static/style.css
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000082361s
+
+static file: static/icon.svg
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000158422s
+
+static file: favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000087591s
+
+non-static file: foo/bar
+[36mGET[0m /foo/bar
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000123751s
+
+built-in file: jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000097961s
+
+non-static file: reload/-3307521948476269824
+[33mPOST[0m /reload/-3307521948476269824
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m403 Forbidden[0m 0.000222263s
+
+static file: favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000059481s
+
+static file: static/style.css
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000052501s
+
+non-static file: foo/bar
+[36mGET[0m /foo/bar
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000131012s
+
+built-in file: jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000106151s
+
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000130771s
+
+non-static file: reload/295679359344238465
+[33mPOST[0m /reload/295679359344238465
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m403 Forbidden[0m 0.000225903s
+
+static file: favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000095111s
+
+static file: static/style.css
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000147652s
+
+static file: static/icon.svg
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000085491s
+
+static file: favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000070231s
+
+non-static file: foo/bar
+[36mGET[0m /foo/bar
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[37m  Status: [0m[32m200 OK[0m 0.000162902s
+
+built-in file: jsaddle.js
+[36mGET[0m /jsaddle.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000121831s
+
+non-static file: reload/769626628893868451
+[33mPOST[0m /reload/769626628893868451
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m403 Forbidden[0m 0.000399964s
+
+non-static file: .well-known/appspecific/com.chrome.devtools.json
+[36mGET[0m /.well-known/appspecific/com.chrome.devtools.json
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000142882s
+
+static file: static/style.css
+[36mGET[0m /static/style.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000179672s
+
+static file: static/icon.svg
+[36mGET[0m /static/icon.svg
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000083281s
+
+static file: favicon.ico
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000080951s
+
