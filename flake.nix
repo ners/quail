@@ -65,7 +65,8 @@
               nodejs
               wasm-tools
             ] ++ attrs.nativeBuildInputs or [ ];
-            postInstall = (attrs.postInstall or "") + ''
+            postInstall = ''
+              ${attrs.postInstall or ""}
               cd "$out"
               cp -r "${staticAssets pkgs}" static
               chmod -R +w static
@@ -80,6 +81,10 @@
               sed -i "s/\?v=0/\?v=$(md5sum app.wasm | cut -d' ' -f1)/" index.html index.js
               cd ..
               mv static/index.html static/favicon.ico static/apple-touch-icon.png .
+            '';
+            postFixup = ''
+              ${attrs.postFixup or ""}
+              rm -rf lib nix-support share
             '';
           });
         })
@@ -156,24 +161,6 @@
             haskellPackages = wasmPkgs'.haskellPackages.extend (haskell-overlay pkgs');
           };
           hps = hpsFor pkgs;
-          pname = "quail";
-          libs = pkgs.buildEnv {
-            name = "${pname}-libs";
-            paths =
-              lib.mapCartesianProduct
-                ({ hp, pname }: hp.${pname})
-                { hp = attrValues hps; pname = pnames; };
-            pathsToLink = [ "/lib" ];
-          };
-          docs = pkgs.buildEnv {
-            name = "${pname}-docs";
-            paths = map (pname: pkgs.haskell.lib.documentationTarball hps.default.${pname}) pnames;
-          };
-          sdist = pkgs.buildEnv {
-            name = "${pname}-sdist";
-            paths = map (pname: pkgs.haskell.lib.sdistTarball hps.default.${pname}) pnames;
-          };
-          docsAndSdist = pkgs.linkFarm "${pname}-docsAndSdist" { inherit docs sdist; };
         in
         {
           formatter.${system} = pkgs.nixpkgs-fmt;
@@ -186,6 +173,7 @@
                   --replace-fail "#define ROOT_DIR \".\"" "#define ROOT_DIR \"${wasmPkgs.haskellPackages.quail-ui}\""
               '';
             });
+            wasm = wasmPkgs.haskellPackages.quail-ui;
           };
           devShells.${system} =
             foreach hps (ghcName: hp: {

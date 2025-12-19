@@ -11,6 +11,7 @@ import Control.Monad (liftM2)
 import Dashi.Components.Widget
 import Dashi.Layout.Page (Page (..))
 import Dashi.Style qualified as Style
+import Dashi.Style.Util (renderStyle)
 import Data.Generics.Labels ()
 import Data.Maybe (maybeToList)
 import Data.String (IsString (fromString))
@@ -55,7 +56,7 @@ app = do
     initComponent
         { events = defaultEvents <> keyboardEvents
         , initialAction = Just Setup
-        , styles = [Style Style.styleStr, Href "/static/style.css"]
+        , styles = [Style $ renderStyle Style.style, Href "/static/style.css"]
         }
   where
     initComponent :: Component parent Model Action
