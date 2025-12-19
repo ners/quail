@@ -1,10 +1,12 @@
-{-# LANGUAGE CPP #-}
-
 module Main where
 
+import Control.Applicative ((<|>))
+import Control.Monad (guard)
+import Control.Monad.Extra (fromMaybeM)
 import Data.ByteString (ByteString)
 import Data.ByteString.Lazy qualified as LazyByteString
 import Data.CaseInsensitive qualified as CI
+import Data.Either.Extra (eitherToMaybe)
 import Data.Morpheus (App)
 import Data.Morpheus.Server (httpPlayground)
 import Data.Morpheus.Subscriptions (PubApp, httpPubApp, webSocketsApp)
@@ -13,29 +15,33 @@ import Data.String (fromString)
 import Data.Text (Text)
 import Data.Text qualified as Text
 import Data.Text.Encoding qualified as Text
-import Data.Text.IO qualified as Text
 import Data.Text.Lazy.Encoding qualified as LazyText
 import Data.Time (getCurrentTime)
 import Effectful
-import Effectful.Error.Static (Error, runErrorWith, throwError)
+import Effectful.Error.Static (Error, runErrorWith)
 import Effectful.Haxl (Haxl, haxl, runHaxl)
 import Effectful.Log (Log, LogLevel (..), LoggerEnv, getLoggerEnv, logMessageIO, object, runLog, (.=))
+import Effectful.NonDet (NonDet, OnEmptyPolicy (OnEmptyKeep), emptyEff, runNonDet)
 import Effectful.Servant.Generic (runWarpServerSettingsContext)
 import Log.Backend.StandardOutput (withStdOutLogger)
-import Network.HTTP.Types (statusCode)
+import Network.HTTP.Types (status200, status301, status405, statusCode)
 import Network.HTTP.Types.URI (queryToQueryText)
-import Network.Wai (Request (..), responseHeaders, responseStatus)
+import Network.Mime (defaultMimeLookup)
+import Network.Wai (Request (..), Response, ResponseReceived, responseFile, responseHeaders, responseLBS, responseStatus)
+import Network.Wai qualified as Request
 import Network.Wai.Handler.Warp (defaultSettings, setHost, setPort)
 import Network.Wai.Handler.WebSockets (websocketsOr)
 import Network.WebSockets (defaultConnectionOptions)
 import Quail.Api
+import Quail.Server.Files (inRootDir)
 import Quail.Server.Gql (gqlApp)
 import Quail.Server.SQLite qualified as SQLite
-import Servant (ServerError (errHeaders), err301, serveDirectoryFileServer)
+import Servant (ServerError)
 import Servant.Server (Application, Context (..))
 import Servant.Server.Generic (AsServerT)
 import Servant.Swagger.UI (swaggerSchemaUIServerT)
-import System.FilePath ((</>))
+import System.Directory.Extra (doesDirectoryExist, doesFileExist)
+import System.FilePath (takeFileName)
 import Prelude
 
 showBs :: ByteString -> Text
@@ -88,8 +94,46 @@ gqlServer publish gqlApp =
         , query = httpPubApp publish gqlApp
         }
 
+fileServer :: forall es. (Haxl :> es, IOE :> es) => Request -> (Response -> IO ResponseReceived) -> Eff es ResponseReceived
+fileServer req sendResponse =
+    fromMaybeM (sendFile index) . fmap eitherToMaybe . runNonDet OnEmptyKeep $
+        checkInvalidMethod
+            <|> tryServePath
+            <|> tryServeDirectory
+            <|> tryRedirect
+  where
+    stub = Text.intercalate "/" $ Request.pathInfo req
+    index = inRootDir "index.html"
+    path = if stub == "/" then index else inRootDir (Text.unpack stub)
+
+    sendPlain status headers =
+        liftIO . sendResponse . responseLBS status (("Content-Type", "text/plain") : headers)
+
+    sendFile :: FilePath -> Eff es ResponseReceived
+    sendFile f =
+        let mimetype = defaultMimeLookup . fromString . takeFileName $ f
+         in liftIO . sendResponse $ responseFile status200 [("Content-Type", mimetype)] f Nothing
+
+    checkInvalidMethod, tryServePath, tryServeDirectory, tryRedirect :: Eff (NonDet ': es) ResponseReceived
+    checkInvalidMethod = do
+        guard $ requestMethod req `notElem` ["GET", "HEAD"]
+        sendPlain status405 [] "Only GET or HEAD is supported"
+
+    tryServePath = do
+        guard =<< (liftIO . doesFileExist) path
+        inject $ sendFile path
+
+    tryServeDirectory = do
+        guard =<< (liftIO . doesDirectoryExist) path
+        inject $ sendFile index
+
+    tryRedirect = do
+        SQLite.UrlEntity{..} <- fromMaybeM emptyEff . haxl $ SQLite.getUrlByStub stub
+        sendPlain status301 [("Location", Text.encodeUtf8 target)] ""
+
 server
-    :: (PubApp e, Error ServerError :> es, Haxl :> es, IOE :> es)
+    :: forall e es
+     . (PubApp e, Haxl :> es, IOE :> es)
     => [e -> Eff es ()]
     -> App e (Eff es)
     -> QuailDocumentedAPI (AsServerT (Eff es))
@@ -99,13 +143,7 @@ server publish gqlApp =
         , api =
             QuailAPI
                 { gql = gqlServer publish gqlApp
-                , static = serveDirectoryFileServer $ ROOT_DIR </> "static"
-                , index = liftIO . Text.readFile $ ROOT_DIR </> "index.html"
-                , url = \(Text.intercalate "/" -> stub) ->
-                    haxl (SQLite.getUrlByStub stub) >>= \case
-                        Nothing -> liftIO . Text.readFile $ ROOT_DIR </> "index.html"
-                        Just SQLite.UrlEntity{..} ->
-                            throwError $ err301{errHeaders = [("Location", Text.encodeUtf8 target)]}
+                , files = fileServer
                 }
         }
 

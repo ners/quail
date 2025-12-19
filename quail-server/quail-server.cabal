@@ -55,7 +55,6 @@ executable quail-server
   import: common
   hs-source-dirs: app
   main-is: Main.hs
-  cpp-options: -DROOT_DIR="."
   build-depends:
     base,
     binary,
@@ -74,6 +73,7 @@ executable quail-server
     lens,
     log-base,
     log-effectful,
+    mime-types,
     monad-logger,
     monad-metrics,
     morpheus-graphql,
@@ -89,15 +89,16 @@ executable quail-server
     sqlite-simple,
     text,
     time,
-    transformers,
     unliftio,
     unliftio-core,
     unordered-containers,
     wai,
+    wai-app-static,
     wai-websockets,
     warp,
     websockets,
 
   other-modules:
+    Quail.Server.Files
     Quail.Server.Gql
     Quail.Server.SQLite

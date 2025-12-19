@@ -182,14 +182,8 @@
             default = pkgs.haskellPackages.quail-server.overrideAttrs (attrs: {
               postPatch = ''
                 ${attrs.postPatch or ""}
-                substituteInPlace quail-server.cabal \
-                  --replace-fail 'ROOT_DIR="."' 'ROOT_DIR="${wasmPkgs.haskellPackages.quail-ui}"'
-              '';
-            });
-            wasm = wasmPkgs.haskellPackages.quail-ui.overrideAttrs (attrs: {
-              postFixup = ''
-                ${attrs.postFixup or ""}
-                rm -rf lib nix-support share
+                substituteInPlace app/Quail/Server/Files.hs \
+                  --replace-fail "#define ROOT_DIR \".\"" "#define ROOT_DIR \"${wasmPkgs.haskellPackages.quail-ui}\""
               '';
             });
           };
