@@ -1,12 +1,15 @@
 module Main where
 
 import Control.Applicative ((<|>))
+import Control.Lens.Operators ((.~))
 import Control.Monad (guard)
 import Control.Monad.Extra (fromMaybeM)
 import Data.ByteString (ByteString)
+import Data.ByteString.Builder qualified as Builder
 import Data.ByteString.Lazy qualified as LazyByteString
 import Data.CaseInsensitive qualified as CI
 import Data.Either.Extra (eitherToMaybe)
+import Data.Function ((&))
 import Data.Morpheus (App)
 import Data.Morpheus.Server (httpPlayground)
 import Data.Morpheus.Subscriptions (PubApp, httpPubApp, webSocketsApp)
@@ -42,6 +45,12 @@ import Servant.Server.Generic (AsServerT)
 import Servant.Swagger.UI (swaggerSchemaUIServerT)
 import System.Directory.Extra (doesDirectoryExist, doesFileExist)
 import System.FilePath (takeFileName)
+import System.Metrics qualified as EKG
+import System.Metrics.Prometheus.Encode.Text qualified as Prometheus
+import System.Metrics.Prometheus.MetricId qualified as Labels
+import System.Metrics.Prometheus.Registry qualified as Prometheus (Registry, sample)
+import System.Metrics.Prometheus.RegistryT qualified as Prometheus (execRegistryT)
+import System.Remote.Monitoring.Prometheus qualified as Prometheus
 import Prelude
 
 showBs :: ByteString -> Text
@@ -95,28 +104,28 @@ gqlServer publish gqlApp =
         }
 
 fileServer :: forall es. (Haxl :> es, IOE :> es) => Request -> (Response -> IO ResponseReceived) -> Eff es ResponseReceived
-fileServer req sendResponse =
+fileServer request respond =
     fromMaybeM (sendFile index) . fmap eitherToMaybe . runNonDet OnEmptyKeep $
         checkInvalidMethod
             <|> tryServePath
             <|> tryServeDirectory
             <|> tryRedirect
   where
-    stub = Text.intercalate "/" $ Request.pathInfo req
+    stub = Text.intercalate "/" $ Request.pathInfo request
     index = inRootDir "index.html"
     path = if stub == "/" then index else inRootDir (Text.unpack stub)
 
     sendPlain status headers =
-        liftIO . sendResponse . responseLBS status (("Content-Type", "text/plain") : headers)
+        liftIO . respond . responseLBS status (("Content-Type", "text/plain") : headers)
 
     sendFile :: FilePath -> Eff es ResponseReceived
     sendFile f =
         let mimetype = defaultMimeLookup . fromString . takeFileName $ f
-         in liftIO . sendResponse $ responseFile status200 [("Content-Type", mimetype)] f Nothing
+         in liftIO . respond $ responseFile status200 [("Content-Type", mimetype)] f Nothing
 
     checkInvalidMethod, tryServePath, tryServeDirectory, tryRedirect :: Eff (NonDet ': es) ResponseReceived
     checkInvalidMethod = do
-        guard $ requestMethod req `notElem` ["GET", "HEAD"]
+        guard $ requestMethod request `notElem` ["GET", "HEAD"]
         sendPlain status405 [] "Only GET or HEAD is supported"
 
     tryServePath = do
@@ -134,12 +143,17 @@ fileServer req sendResponse =
 server
     :: forall e es
      . (PubApp e, Haxl :> es, IOE :> es)
-    => [e -> Eff es ()]
+    => Prometheus.Registry
+    -> [e -> Eff es ()]
     -> App e (Eff es)
     -> QuailDocumentedAPI (AsServerT (Eff es))
-server publish gqlApp =
+server registry publish gqlApp =
     QuailDocumentedAPI
         { swagger = swaggerSchemaUIServerT apiDoc
+        , metrics =
+            Builder.toLazyByteString
+                . Prometheus.encodeMetrics
+                <$> liftIO (Prometheus.sample registry)
         , api =
             QuailAPI
                 { gql = gqlServer publish gqlApp
@@ -149,6 +163,12 @@ server publish gqlApp =
 
 main :: IO ()
 main = do
+    store <- EKG.newStore
+    EKG.registerGcMetrics store
+    registry <- Prometheus.execRegistryT do
+        let labels = Labels.fromList [("ghc", "rts")]
+            adapterOptions = Prometheus.defaultOptions labels & Prometheus.samplingFrequency .~ 1
+        Prometheus.registerEKGStore store adapterOptions
     let logLevel = LogTrace
     SQLite.createUrlDb
     haxlEnv <- SQLite.initUrlEnv
@@ -161,6 +181,6 @@ main = do
             let settings = setHost "*6" . setPort 8081 $ defaultSettings
                 middleware = logMiddleware loggerEnv . websocketsOr defaultConnectionOptions wsApp
                 routes :: QuailDocumentedAPI (AsServerT (Eff '[Error ServerError, Log, Haxl, IOE]))
-                routes = server [inject . publish] gqlApp
+                routes = server registry [inject . publish] gqlApp
                 context = EmptyContext
             runWarpServerSettingsContext settings context routes middleware

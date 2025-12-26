@@ -3,6 +3,7 @@
 module Quail.Api where
 
 import Control.Lens.Operators ((.~), (?~))
+import Data.ByteString.Lazy (LazyByteString)
 import Data.Data (Proxy (..))
 import Data.Function ((&))
 import Data.Morpheus.Extra ()
@@ -13,6 +14,7 @@ import Data.Text.Lazy (LazyText)
 import GHC.Generics (Generic)
 import Servant.API
 import Servant.Html
+import Servant.Metrics (Metrics)
 import Servant.OpenApi (HasOpenApi, toOpenApi)
 import Servant.Swagger.UI (SwaggerSchemaUI)
 import Prelude
@@ -21,6 +23,7 @@ type API = NamedRoutes QuailDocumentedAPI
 
 data QuailDocumentedAPI mode = QuailDocumentedAPI
     { swagger :: mode :- SwaggerSchemaUI "swagger" "swagger.json"
+    , metrics :: mode :- "metrics" :> Get '[Metrics] LazyByteString
     , api :: mode :- NamedRoutes QuailAPI
     }
     deriving stock (Generic)

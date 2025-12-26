@@ -75,6 +75,7 @@ library
     Quail.Api
     Quail.GqlSchema
     Servant.Html
+    Servant.Metrics
 
   other-modules:
     Data.Morpheus.Extra

@@ -4,6 +4,7 @@ dist-newstyle
 result
 result-*
 *.db
+*.qcow2
 
 *.css
 *.ico

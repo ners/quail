@@ -142,14 +142,6 @@
         default = overlay;
         haskell = haskell-overlay;
       };
-      nixosConfigurations.server = lib.nixosSystem {
-        modules = [
-          {
-            nixpkgs.hostPlatform = "x86_64-linux";
-            services.postgresql.enable = true;
-          }
-        ];
-      };
     }
     //
     foreach inputs.nixpkgs.legacyPackages
@@ -173,6 +165,7 @@
                   --replace-fail "#define ROOT_DIR \".\"" "#define ROOT_DIR \"${wasmPkgs.haskellPackages.quail-ui}\""
               '';
             });
+            nixosConfigurations.vm = import ./vm.nix { inherit lib pkgs; };
             wasm = wasmPkgs.haskellPackages.quail-ui;
           };
           devShells.${system} =
@@ -187,6 +180,7 @@
                   hp.haskell-language-server
                   inputs.nixos-compose.packages.${system}.default
                   nixpkgs-fmt
+                  nixos-shell
                 ];
                 shellHook = ''
                   cd quail-ui
