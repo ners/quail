@@ -1,7 +1,7 @@
 cabal-version: 3.0
-name: quail-server
+name: opentelemetry-effectful
 version: 0.1.0.0
-synopsis: Quail server
+synopsis: OpenTelemetry effect for Effectful
 homepage: https://github.com/ners/quail/blob/main/README.md
 license: Apache-2.0
 author: ners
@@ -51,60 +51,22 @@ common common
     TypeFamilies
     ViewPatterns
 
-executable quail-server
+library
   import: common
-  ghc-options: -threaded -rtsopts -with-rtsopts=-T
-  hs-source-dirs: app
-  main-is: Main.hs
+  hs-source-dirs: src
   build-depends:
     aeson,
+    aeson-pretty,
     base,
-    binary,
     bytestring,
-    case-insensitive,
-    containers,
-    dhall,
+    clock,
+    co-log-core,
+    co-log-effectful,
     effectful,
-    ekg-core,
-    ekg-prometheus-adapter,
-    extra,
-    filepath,
-    generic-lens,
-    hashable,
-    haxl,
-    haxl-effectful,
+    hs-opentelemetry-api,
     hs-opentelemetry-sdk,
-    http-types,
-    lens,
-    lens,
-    mime-types,
-    monad-logger,
-    monad-metrics,
-    morpheus-graphql,
-    morpheus-graphql-server,
-    morpheus-graphql-subscriptions,
-    mtl,
-    openapi3,
-    opentelemetry-effectful,
-    prometheus,
-    quail-api,
-    servant-effectful,
-    servant-openapi3,
-    servant-server,
-    servant-swagger-ui,
-    sqlite-simple,
     text,
-    time,
-    unliftio,
-    unliftio-core,
-    unordered-containers,
-    wai,
-    wai-app-static,
-    wai-websockets,
-    warp,
-    websockets,
 
-  other-modules:
-    Quail.Server.Files
-    Quail.Server.Gql
-    Quail.Server.SQLite
+  exposed-modules:
+    Effectful.OpenTelemetry.Trace
+    Effectful.OpenTelemetry.Log

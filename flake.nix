@@ -57,7 +57,10 @@
         (hfinal: hprev: lib.genAttrs pnames (pname: hfinal.callCabal2nix pname (sourceFilter ./${pname}) { }))
         (hfinal: hprev: with pkgs.haskell.lib.compose; {
           haxl = doJailbreak hprev.haxl;
+          co-log-effectful = doJailbreak (unmarkBroken hprev.co-log-effectful);
           morpheus-graphql-code-gen = doJailbreak (unmarkBroken hprev.morpheus-graphql-code-gen);
+          proto-lens = doJailbreak hprev.proto-lens;
+          proto-lens-runtime = doJailbreak hprev.proto-lens-runtime;
           servant-effectful = hfinal.callCabal2nix "servant-effectful" inputs.servant-effectful { };
           quail-ui = hprev.quail-ui.overrideAttrs (attrs: lib.optionalAttrs (isWasmPkgs hprev) {
             nativeBuildInputs = with pkgs; [
@@ -165,7 +168,7 @@
                   --replace-fail "#define ROOT_DIR \".\"" "#define ROOT_DIR \"${wasmPkgs.haskellPackages.quail-ui}\""
               '';
             });
-            nixosConfigurations.vm = import ./vm.nix { inherit lib pkgs; };
+            nixosConfigurations.vm = import ./vm.nix { inherit lib; inherit (pkgs) hostPlatform; };
             wasm = wasmPkgs.haskellPackages.quail-ui;
           };
           devShells.${system} =
@@ -182,6 +185,10 @@
                   nixpkgs-fmt
                   nixos-shell
                 ];
+                env = {
+                  OTEL_EXPORTER_OTLP_ENDPOINT = "http://localhost:4318";
+                  OTEL_TRACES_EXPORTER = "otlp";
+                };
                 shellHook = ''
                   cd quail-ui
                   find static -type l -delete

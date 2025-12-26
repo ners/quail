@@ -1,10 +1,14 @@
-{ lib, pkgs, ... }:
+{ lib, hostPlatform }:
 
 lib.makeOverridable lib.nixosSystem {
   modules = [
-    ({ config, ... }: {
-      nixpkgs.hostPlatform = pkgs.hostPlatform.system;
+    ({ config, pkgs, ... }: {
+      nixpkgs.hostPlatform = hostPlatform.system;
       users.users.root.shell = lib.mkForce pkgs.bash;
+
+      environment.systemPackages = with pkgs; [
+        tcpdump
+      ];
 
       services.nginx = {
         enable = true;
@@ -148,6 +152,18 @@ lib.makeOverridable lib.nixosSystem {
             from = "host";
             guest.port = config.services.nginx.defaultHTTPListenPort;
             host.port = 3000;
+          }
+          {
+            # OTLP gRPC ingestion
+            from = "host";
+            guest.port = 4317;
+            host.port = 4317;
+          }
+          {
+            # OTLP HTTP ingestion
+            from = "host";
+            guest.port = 4318;
+            host.port = 4318;
           }
         ];
       };

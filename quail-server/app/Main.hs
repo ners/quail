@@ -1,9 +1,13 @@
+{-# OPTIONS_GHC -Wno-orphans #-}
+
 module Main where
 
 import Control.Applicative ((<|>))
 import Control.Lens.Operators ((.~))
 import Control.Monad (guard)
 import Control.Monad.Extra (fromMaybeM)
+import Data.Aeson.Types (ToJSON (..), (.=))
+import Data.Aeson.Types qualified as Aeson
 import Data.ByteString (ByteString)
 import Data.ByteString.Builder qualified as Builder
 import Data.ByteString.Lazy qualified as LazyByteString
@@ -19,16 +23,14 @@ import Data.Text (Text)
 import Data.Text qualified as Text
 import Data.Text.Encoding qualified as Text
 import Data.Text.Lazy.Encoding qualified as LazyText
-import Data.Time (getCurrentTime)
 import Effectful
-import Effectful.Error.Static (Error, runErrorWith)
+import Effectful.Error.Static (Error, HasCallStack, runErrorWith)
 import Effectful.Haxl (Haxl, haxl, runHaxl)
-import Effectful.Log (Log, LogLevel (..), LoggerEnv, getLoggerEnv, logMessageIO, object, runLog, (.=))
 import Effectful.NonDet (NonDet, OnEmptyPolicy (OnEmptyKeep), emptyEff, runNonDet)
+import Effectful.OpenTelemetry.Log
+import Effectful.OpenTelemetry.Trace
 import Effectful.Servant.Generic (runWarpServerSettingsContext)
-import Log.Backend.StandardOutput (withStdOutLogger)
-import Network.HTTP.Types (status200, status301, status405, statusCode)
-import Network.HTTP.Types.URI (queryToQueryText)
+import Network.HTTP.Types (queryToQueryText, status200, status301, status405, statusCode)
 import Network.Mime (defaultMimeLookup)
 import Network.Wai (Request (..), Response, ResponseReceived, responseFile, responseHeaders, responseLBS, responseStatus)
 import Network.Wai qualified as Request
@@ -40,7 +42,7 @@ import Quail.Server.Files (inRootDir)
 import Quail.Server.Gql (gqlApp)
 import Quail.Server.SQLite qualified as SQLite
 import Servant (ServerError)
-import Servant.Server (Application, Context (..))
+import Servant.Server (Context (..))
 import Servant.Server.Generic (AsServerT)
 import Servant.Swagger.UI (swaggerSchemaUIServerT)
 import System.Directory.Extra (doesDirectoryExist, doesFileExist)
@@ -56,14 +58,12 @@ import Prelude
 showBs :: ByteString -> Text
 showBs = either (Text.pack . show) id . Text.decodeUtf8'
 
-logMiddleware :: LoggerEnv -> Application -> Application
-logMiddleware loggerEnv app req respond' = do
-    time <- getCurrentTime
-    logMessageIO loggerEnv time LogTrace "Request" $
-        object
+instance ToJSON Request where
+    toJSON req =
+        Aeson.object
             [ "method" .= showBs req.requestMethod
             , "query"
-                .= object
+                .= Aeson.object
                     [ (fromString . Text.unpack $ name) .= value
                     | (name, value) <- queryToQueryText req.queryString
                     ]
@@ -72,24 +72,24 @@ logMiddleware loggerEnv app req respond' = do
             , "user_agent" .= fmap showBs req.requestHeaderUserAgent
             , "body_length" .= show req.requestBodyLength
             , "headers"
-                .= object
+                .= Aeson.object
                     [ (fromString . Text.unpack . Text.decodeUtf8 . CI.original $ name)
                         .= Text.decodeUtf8 value
                     | (name, value) <- req.requestHeaders
                     ]
             ]
-    app req \res -> do
-        logMessageIO loggerEnv time LogTrace "Response" $
-            object
-                [ "status" .= statusCode (responseStatus res)
-                , "headers"
-                    .= object
-                        [ (fromString . Text.unpack . Text.decodeUtf8 . CI.original $ name)
-                            .= Text.decodeUtf8 value
-                        | (name, value) <- responseHeaders res
-                        ]
-                ]
-        respond' res
+
+instance ToJSON Response where
+    toJSON res =
+        Aeson.object
+            [ "status" .= statusCode (responseStatus res)
+            , "headers"
+                .= Aeson.object
+                    [ (fromString . Text.unpack . Text.decodeUtf8 . CI.original $ name)
+                        .= Text.decodeUtf8 value
+                    | (name, value) <- responseHeaders res
+                    ]
+            ]
 
 gqlServer
     :: (PubApp e, IOE :> es)
@@ -103,14 +103,23 @@ gqlServer publish gqlApp =
         , query = httpPubApp publish gqlApp
         }
 
-fileServer :: forall es. (Haxl :> es, IOE :> es) => Request -> (Response -> IO ResponseReceived) -> Eff es ResponseReceived
+fileServer
+    :: forall es
+     . (HasCallStack, Haxl :> es, Tracing :> es, Log :> es, IOE :> es)
+    => Request
+    -> (Response -> IO ResponseReceived)
+    -> Eff es ResponseReceived
 fileServer request respond =
-    fromMaybeM (sendFile index) . fmap eitherToMaybe . runNonDet OnEmptyKeep $
-        checkInvalidMethod
+    inSpan ("fileServer:" <> stub) spanArguments
+        . fromMaybeM (sendFile index)
+        . fmap eitherToMaybe
+        . runNonDet OnEmptyKeep
+        $ checkInvalidMethod
             <|> tryServePath
             <|> tryServeDirectory
             <|> tryRedirect
   where
+    spanArguments = defaultSpanArguments{kind = Server}
     stub = Text.intercalate "/" $ Request.pathInfo request
     index = inRootDir "index.html"
     path = if stub == "/" then index else inRootDir (Text.unpack stub)
@@ -126,6 +135,7 @@ fileServer request respond =
     checkInvalidMethod, tryServePath, tryServeDirectory, tryRedirect :: Eff (NonDet ': es) ResponseReceived
     checkInvalidMethod = do
         guard $ requestMethod request `notElem` ["GET", "HEAD"]
+        logTrace "InvalidMethod" request
         sendPlain status405 [] "Only GET or HEAD is supported"
 
     tryServePath = do
@@ -134,6 +144,7 @@ fileServer request respond =
 
     tryServeDirectory = do
         guard =<< (liftIO . doesDirectoryExist) path
+        logTrace "InvalidDirectoryRequest" request
         inject $ sendFile index
 
     tryRedirect = do
@@ -142,7 +153,13 @@ fileServer request respond =
 
 server
     :: forall e es
-     . (PubApp e, Haxl :> es, IOE :> es)
+     . ( HasCallStack
+       , PubApp e
+       , Haxl :> es
+       , Tracing :> es
+       , Log :> es
+       , IOE :> es
+       )
     => Prometheus.Registry
     -> [e -> Eff es ()]
     -> App e (Eff es)
@@ -169,18 +186,18 @@ main = do
         let labels = Labels.fromList [("ghc", "rts")]
             adapterOptions = Prometheus.defaultOptions labels & Prometheus.samplingFrequency .~ 1
         Prometheus.registerEKGStore store adapterOptions
-    let logLevel = LogTrace
     SQLite.createUrlDb
     haxlEnv <- SQLite.initUrlEnv
-    withStdOutLogger \logger -> runEff
+    runEff
         . runHaxl haxlEnv
-        . runLog "quail" logger logLevel
+        . runLog minBound minBound
+        . runMainDefaultTracing "quail-server"
         $ do
             (wsApp, publish) <- runErrorWith @ServerError undefined $ webSocketsApp gqlApp
-            loggerEnv <- getLoggerEnv
             let settings = setHost "*6" . setPort 8081 $ defaultSettings
-                middleware = logMiddleware loggerEnv . websocketsOr defaultConnectionOptions wsApp
-                routes :: QuailDocumentedAPI (AsServerT (Eff '[Error ServerError, Log, Haxl, IOE]))
+                middleware = websocketsOr defaultConnectionOptions wsApp
+                routes :: QuailDocumentedAPI (AsServerT (Eff '[Error ServerError, Tracing, Log, Haxl, IOE]))
+
                 routes = server registry [inject . publish] gqlApp
                 context = EmptyContext
             runWarpServerSettingsContext settings context routes middleware
