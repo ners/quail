@@ -18,6 +18,10 @@
       url = "github:ners/dashi";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hs-opentelemetry = {
+      url = "github:ners/hs-opentelemetry/log-exporter";
+      flake = false;
+    };
   };
 
   outputs = inputs:
@@ -50,14 +54,22 @@
         { }
         pkgs.haskell.packages;
       hpsFor = pkgs: { default = pkgs.haskellPackages; } // ghcsFor pkgs;
-      pnames = map (path: baseNameOf (dirOf path)) (lib.fileset.toList (lib.fileset.fileFilter (file: file.hasExt "cabal") ./.));
+      projects =
+        with lib;
+        genAttrs'
+          (fileset.toList (fileset.fileFilter (file: file.hasExt "cabal") ./.))
+          (file: nameValuePair (removeSuffix ".cabal" (baseNameOf file)) (dirOf file));
+      pnames = attrNames projects;
       isWasmPkgs = haskellPackages: haskellPackages.ghc.targetPrefix == "wasm32-wasi-";
       haskell-overlay = pkgs: lib.composeManyExtensions [
         (inputs.dashi.overlays.haskell pkgs)
-        (hfinal: hprev: lib.genAttrs pnames (pname: hfinal.callCabal2nix pname (sourceFilter ./${pname}) { }))
+        (hfinal: hprev: lib.mapAttrs (pname: dir: hfinal.callCabal2nix pname (sourceFilter dir) { }) projects)
         (hfinal: hprev: with pkgs.haskell.lib.compose; {
-          haxl = doJailbreak hprev.haxl;
           co-log-effectful = doJailbreak (unmarkBroken hprev.co-log-effectful);
+          haxl = doJailbreak hprev.haxl;
+          hs-opentelemetry-api = hfinal.callCabal2nix "hs-opentelemetry-api" (inputs.hs-opentelemetry + "/api") { };
+          hs-opentelemetry-exporter-otlp = hfinal.callCabal2nix "hs-opentelemetry-exporter-otlp" (inputs.hs-opentelemetry + "/exporters/otlp") { };
+          hs-opentelemetry-sdk = hfinal.callCabal2nix "hs-opentelemetry-sdk" (inputs.hs-opentelemetry + "/sdk") { };
           morpheus-graphql-code-gen = doJailbreak (unmarkBroken hprev.morpheus-graphql-code-gen);
           proto-lens = doJailbreak hprev.proto-lens;
           proto-lens-runtime = doJailbreak hprev.proto-lens-runtime;
@@ -168,7 +180,7 @@
                   --replace-fail "#define ROOT_DIR \".\"" "#define ROOT_DIR \"${wasmPkgs.haskellPackages.quail-ui}\""
               '';
             });
-            nixosConfigurations.vm = import ./vm.nix { inherit lib; inherit (pkgs) hostPlatform; };
+            nixosConfigurations.vm = import ./vm { inherit lib; inherit (pkgs) hostPlatform; };
             wasm = wasmPkgs.haskellPackages.quail-ui;
           };
           devShells.${system} =

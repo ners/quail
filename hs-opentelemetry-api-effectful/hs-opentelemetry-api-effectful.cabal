@@ -1,5 +1,5 @@
 cabal-version: 3.0
-name: opentelemetry-effectful
+name: hs-opentelemetry-api-effectful
 version: 0.1.0.0
 synopsis: OpenTelemetry effect for Effectful
 homepage: https://github.com/ners/quail/blob/main/README.md
@@ -60,12 +60,12 @@ library
     base,
     bytestring,
     clock,
-    co-log-core,
-    co-log-effectful,
     effectful,
     hs-opentelemetry-api,
+    hs-opentelemetry-api-aeson,
     hs-opentelemetry-sdk,
     text,
+    unordered-containers,
 
   exposed-modules:
     Effectful.OpenTelemetry.Trace

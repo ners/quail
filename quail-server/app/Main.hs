@@ -37,6 +37,7 @@ import Network.Wai qualified as Request
 import Network.Wai.Handler.Warp (defaultSettings, setHost, setPort)
 import Network.Wai.Handler.WebSockets (websocketsOr)
 import Network.WebSockets (defaultConnectionOptions)
+import OpenTelemetry.Trace (InstrumentationLibrary)
 import Quail.Api
 import Quail.Server.Files (inRootDir)
 import Quail.Server.Gql (gqlApp)
@@ -54,6 +55,7 @@ import System.Metrics.Prometheus.Registry qualified as Prometheus (Registry, sam
 import System.Metrics.Prometheus.RegistryT qualified as Prometheus (execRegistryT)
 import System.Remote.Monitoring.Prometheus qualified as Prometheus
 import Prelude
+import GHC.Generics (Generic)
 
 showBs :: ByteString -> Text
 showBs = either (Text.pack . show) id . Text.decodeUtf8'
@@ -103,9 +105,13 @@ gqlServer publish gqlApp =
         , query = httpPubApp publish gqlApp
         }
 
+data RequestLog = RequestLog { message :: Text, request :: Request }
+    deriving stock (Generic)
+    deriving anyclass (ToJSON)
+
 fileServer
     :: forall es
-     . (HasCallStack, Haxl :> es, Tracing :> es, Log :> es, IOE :> es)
+     . (HasCallStack, Haxl :> es, Tracing :> es, Logging :> es, IOE :> es)
     => Request
     -> (Response -> IO ResponseReceived)
     -> Eff es ResponseReceived
@@ -135,7 +141,7 @@ fileServer request respond =
     checkInvalidMethod, tryServePath, tryServeDirectory, tryRedirect :: Eff (NonDet ': es) ResponseReceived
     checkInvalidMethod = do
         guard $ requestMethod request `notElem` ["GET", "HEAD"]
-        logTrace "InvalidMethod" request
+        log_ Trace RequestLog{ message = "Invalid method", request } mempty
         sendPlain status405 [] "Only GET or HEAD is supported"
 
     tryServePath = do
@@ -144,7 +150,7 @@ fileServer request respond =
 
     tryServeDirectory = do
         guard =<< (liftIO . doesDirectoryExist) path
-        logTrace "InvalidDirectoryRequest" request
+        log_ Trace RequestLog{ message = "Invalid directory request", request } mempty
         inject $ sendFile index
 
     tryRedirect = do
@@ -157,7 +163,7 @@ server
        , PubApp e
        , Haxl :> es
        , Tracing :> es
-       , Log :> es
+       , Logging :> es
        , IOE :> es
        )
     => Prometheus.Registry
@@ -188,15 +194,17 @@ main = do
         Prometheus.registerEKGStore store adapterOptions
     SQLite.createUrlDb
     haxlEnv <- SQLite.initUrlEnv
+    let instrumentationLibrary :: InstrumentationLibrary
+        instrumentationLibrary = "quail-server"
     runEff
         . runHaxl haxlEnv
-        . runLog minBound minBound
-        . runMainDefaultTracing "quail-server"
+        . runMainDefaultLogging instrumentationLibrary
+        . runMainDefaultTracing instrumentationLibrary
         $ do
             (wsApp, publish) <- runErrorWith @ServerError undefined $ webSocketsApp gqlApp
             let settings = setHost "*6" . setPort 8081 $ defaultSettings
                 middleware = websocketsOr defaultConnectionOptions wsApp
-                routes :: QuailDocumentedAPI (AsServerT (Eff '[Error ServerError, Tracing, Log, Haxl, IOE]))
+                routes :: QuailDocumentedAPI (AsServerT (Eff '[Error ServerError, Tracing, Logging, Haxl, IOE]))
 
                 routes = server registry [inject . publish] gqlApp
                 context = EmptyContext

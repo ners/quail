@@ -4,10 +4,10 @@
 
 module Effectful.OpenTelemetry.Trace
     ( Tracing
+    , runTracing
     , SpanArguments (..)
     , SpanKind (..)
     , defaultSpanArguments
-    , runTracing
     , runDefaultTracing
     , runMainDefaultTracing
     , initializeGlobalTracerProvider
@@ -54,9 +54,8 @@ runTracing
     -> TracerOptions
     -> Eff (Tracing ': es) b
     -> Eff es b
-runTracing provider lib opts action = do
-    let tracer = makeTracer provider lib opts
-    evalStaticRep (Tracing tracer) action
+runTracing provider lib opts =
+    evalStaticRep . Tracing $ makeTracer provider lib opts
 
 runDefaultTracing
     :: (IOE :> es)

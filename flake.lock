@@ -172,6 +172,23 @@
         "type": "gitlab"
       }
     },
+    "hs-opentelemetry": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1767527450,
+        "narHash": "sha256-QgBpUnFvuEtarMcY/932jh9JloldDT9HgXSR/BTzIvw=",
+        "owner": "ners",
+        "repo": "hs-opentelemetry",
+        "rev": "b4d719de363b3b448f545c2f2a1635ff540a9285",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ners",
+        "ref": "log-exporter",
+        "repo": "hs-opentelemetry",
+        "type": "github"
+      }
+    },
     "mdi": {
       "flake": false,
       "locked": {
@@ -307,6 +324,7 @@
     "root": {
       "inputs": {
         "dashi": "dashi",
+        "hs-opentelemetry": "hs-opentelemetry",
         "nixos-compose": "nixos-compose",
         "nixpkgs": "nixpkgs",
         "servant-effectful": "servant-effectful"
