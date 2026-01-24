@@ -18,7 +18,10 @@ import Effectful
 import Effectful.Dispatch.Static
 import Effectful.Exception (bracket)
 import GHC.Stack (SrcLoc (..), callStack, getCallStack, withFrozenCallStack)
-import OpenTelemetry.Internal.Common.Types.Aeson (objectToAnyValueMap, valueToAnyValue)
+import OpenTelemetry.Internal.Common.Types.Aeson
+    ( objectToAnyValueMap
+    , valueToAnyValue
+    )
 import OpenTelemetry.Internal.Logs.Types (emptyLogRecordArguments)
 import OpenTelemetry.Log (initializeGlobalLoggerProvider)
 import OpenTelemetry.Logs.Core
@@ -63,7 +66,10 @@ runMainDefaultLogging lib action =
             setGlobalLoggerProvider provider
             runLogging provider lib action
 
-emitLogRecord :: (Logging :> es) => LogRecordArguments -> Eff es ReadWriteLogRecord
+emitLogRecord
+    :: (Logging :> es)
+    => LogRecordArguments
+    -> Eff es ReadWriteLogRecord
 emitLogRecord args = do
     Logging logger <- getStaticRep
     unsafeEff_ $ OpenTelemetry.emitLogRecord logger args
@@ -85,7 +91,12 @@ callStackValue = ArrayValue $ uncurry prettyCallStackLine <$> getCallStack callS
             , show srcLocStartLine
             ]
 
-log_ :: (HasCallStack, ToJSON a, Logging :> es) => SeverityNumber -> a -> Object -> Eff es ()
+log_
+    :: (HasCallStack, ToJSON a, Logging :> es)
+    => SeverityNumber
+    -> a
+    -> Object
+    -> Eff es ()
 log_ (Just -> severityNumber) (valueToAnyValue . toJSON -> body) (objectToAnyValueMap -> attributes) =
     withFrozenCallStack $
         emitLogRecord_ $

@@ -7,6 +7,7 @@
 
 module Quail.GqlSchema where
 
+import Data.Bool (Bool)
 import Data.Morpheus.Document (importGQLDocument)
 import Data.Text (Text)
 

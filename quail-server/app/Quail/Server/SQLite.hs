@@ -82,11 +82,23 @@ headOr e = maybe (Left $ SomeException e) Right . listToMaybe
 run :: Req a -> IO a
 run GetAllUrls = query' [sql| SELECT * FROM urls |]
 run (GetUrlByStub stub) = listToMaybe <$> query [sql| SELECT * FROM urls WHERE stub = ? |] (Only stub)
-run (CreateUrl stub target) = headOr (AlreadyExists stub) <$> query [sql| INSERT OR IGNORE INTO urls VALUES (?, ?) RETURNING * |] (stub, target)
-run (UpdateUrl stub target) = headOr (NotFound stub) <$> query [sql| UPDATE urls SET target = ? WHERE stub = ? RETURNING * |] (target, stub)
-run (DeleteUrl stub) = headOr (NotFound stub) <$> query [sql| DELETE FROM urls WHERE stub = ? RETURNING * |] (Only stub)
+run (CreateUrl stub target) =
+    headOr (AlreadyExists stub)
+        <$> query
+            [sql| INSERT OR IGNORE INTO urls VALUES (?, ?) RETURNING * |]
+            (stub, target)
+run (UpdateUrl stub target) =
+    headOr (NotFound stub)
+        <$> query
+            [sql| UPDATE urls SET target = ? WHERE stub = ? RETURNING * |]
+            (target, stub)
+run (DeleteUrl stub) =
+    headOr (NotFound stub)
+        <$> query [sql| DELETE FROM urls WHERE stub = ? RETURNING * |] (Only stub)
 
-query :: (SQLite.Simple.ToRow p, SQLite.Simple.FromRow r) => SQLite.Simple.Query -> p -> IO [r]
+query
+    :: (SQLite.Simple.ToRow p, SQLite.Simple.FromRow r)
+    => SQLite.Simple.Query -> p -> IO [r]
 query q p = SQLite.Simple.withConnection "test.db" \c -> SQLite.Simple.query c q p
 
 query' :: (SQLite.Simple.FromRow r) => SQLite.Simple.Query -> IO [r]

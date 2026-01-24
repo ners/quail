@@ -75,7 +75,10 @@ runMainDefaultTracing lib action =
     bracket (liftIO initializeGlobalTracerProvider) shutdownTracerProvider $
         \provider -> runDefaultTracing provider lib action
 
-perform :: (Tracing :> es) => (Tracer -> (forall r. Eff es r -> IO r) -> IO a) -> Eff es a
+perform
+    :: (Tracing :> es)
+    => (Tracer -> (forall r. Eff es r -> IO r) -> IO a)
+    -> Eff es a
 perform f = do
     Tracing tracer <- getStaticRep
     unsafeConcUnliftIO Ephemeral (Limited 1) (f tracer)
@@ -83,8 +86,10 @@ perform f = do
 inSpan :: (Tracing :> es) => Text -> SpanArguments -> Eff es a -> Eff es a
 inSpan spanName args a = perform \tracer unlift -> OpenTelemetry.inSpan tracer spanName args (unlift a)
 
-inSpan' :: (Tracing :> es) => Text -> SpanArguments -> (Span -> Eff es a) -> Eff es a
+inSpan'
+    :: (Tracing :> es) => Text -> SpanArguments -> (Span -> Eff es a) -> Eff es a
 inSpan' spanName args f = perform \tracer unlift -> OpenTelemetry.inSpan' tracer spanName args (unlift . f)
 
-inSpan'' :: (Tracing :> es) => Text -> SpanArguments -> (Span -> Eff es a) -> Eff es a
+inSpan''
+    :: (Tracing :> es) => Text -> SpanArguments -> (Span -> Eff es a) -> Eff es a
 inSpan'' spanName args f = perform \tracer unlift -> OpenTelemetry.inSpan'' tracer spanName args (unlift . f)

@@ -40,11 +40,11 @@
         "web-font-mdi": "web-font-mdi"
       },
       "locked": {
-        "lastModified": 1766566737,
-        "narHash": "sha256-sJrZ++hNsf7kE513VBQ7gXjjnkHiXPdfr5ZxJ3qXSKo=",
+        "lastModified": 1769063766,
+        "narHash": "sha256-/oaqBC2smCGoNtscZOKep1ygNL6bAskHkpo6Jt6uY1c=",
         "owner": "ners",
         "repo": "dashi",
-        "rev": "5a328d4d235dd1e08e0fb7055d96f72a4068984f",
+        "rev": "f6c4d4694e69cd471198a81e72406be51ccb1885",
         "type": "github"
       },
       "original": {
@@ -147,6 +147,22 @@
         "type": "github"
       }
     },
+    "ghc-source-gen": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1767727283,
+        "narHash": "sha256-TsPEK0I5c9FYqZp0lAzQNogqEv1LPMzdjFO9EtOm/Ls=",
+        "owner": "google",
+        "repo": "ghc-source-gen",
+        "rev": "79ecc01213131da03a7198fc377606ce72ac037a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "google",
+        "repo": "ghc-source-gen",
+        "type": "github"
+      }
+    },
     "ghc-wasm-meta": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -157,17 +173,16 @@
       },
       "locked": {
         "host": "gitlab.haskell.org",
-        "lastModified": 1762008043,
-        "narHash": "sha256-CLVqoTiBeysUdGJeZFPyDNgRVSArrTXEBiGUZZjQYM4=",
-        "owner": "ners",
+        "lastModified": 1769039128,
+        "narHash": "sha256-B8ZzYWebrm9P3DW6cVJQ1DWhpug7zlXo1KbtWLLYAZE=",
+        "owner": "haskell-wasm",
         "repo": "ghc-wasm-meta",
-        "rev": "c0c7ca4158cca7d1d3f3afba0eaff725cbd7d1a0",
+        "rev": "d2eed5b2e5f076991c9eab1e371bfcbd517eeff0",
         "type": "gitlab"
       },
       "original": {
         "host": "gitlab.haskell.org",
-        "owner": "ners",
-        "ref": "fix-nix-hostPlatform",
+        "owner": "haskell-wasm",
         "repo": "ghc-wasm-meta",
         "type": "gitlab"
       }
@@ -226,11 +241,11 @@
     "miso": {
       "flake": false,
       "locked": {
-        "lastModified": 1766448543,
-        "narHash": "sha256-n6Dy8f/xyvBZDO3QySOlfH9yfLqWHB5lg5YONRt7fGs=",
+        "lastModified": 1769054826,
+        "narHash": "sha256-BqEV8WNb2H8oCrRP8lzb4E1xXwjuQAud8iFULMmoU3s=",
         "owner": "haskell-miso",
         "repo": "miso",
-        "rev": "2e8dd81f9731229f83cac6137843ec3a9d498b86",
+        "rev": "bd65a4baea4d04a8fe6656779acc851715e4b2b9",
         "type": "github"
       },
       "original": {
@@ -242,16 +257,32 @@
     "miso-diagrams": {
       "flake": false,
       "locked": {
-        "lastModified": 1765453822,
-        "narHash": "sha256-NZzNf0zZm0zBGoQCAbkpRHyy91NNK0mkUcYam/eM09I=",
+        "lastModified": 1767469376,
+        "narHash": "sha256-JMtloMQjkrMd44aAaLjfTz2ctpazj+/BMkpgYO6YKmI=",
         "owner": "haskell-miso",
         "repo": "miso-diagrams",
-        "rev": "fda181ecc1750af7f9775e6f016ccd9cb4444d83",
+        "rev": "db0e743d28aca12256ddcd2191b14abc749f8a37",
         "type": "github"
       },
       "original": {
         "owner": "haskell-miso",
         "repo": "miso-diagrams",
+        "type": "github"
+      }
+    },
+    "miso-graphql": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1769210911,
+        "narHash": "sha256-ynA72P1dWSWOvJYv9GgJ/kuW1dZiZKYGorz3Dj2xScU=",
+        "owner": "haskell-miso",
+        "repo": "miso-graphql",
+        "rev": "96789165381e14d3d3bf351830c087e4d45b0022",
+        "type": "github"
+      },
+      "original": {
+        "owner": "haskell-miso",
+        "repo": "miso-graphql",
         "type": "github"
       }
     },
@@ -291,27 +322,26 @@
         ]
       },
       "locked": {
-        "lastModified": 1764621840,
-        "narHash": "sha256-N6UXDb+vElNIShpS3Wbtu8HLU18lYTCYWIVzqqSPmLY=",
-        "owner": "ners",
+        "lastModified": 1767740749,
+        "narHash": "sha256-G9aHucQmIgovgvw3ldLdPW6osGuRhAFg2m0KQztOYFY=",
+        "owner": "garnix-io",
         "repo": "nixos-compose",
-        "rev": "36c22389ef7053b8c1b7c801863dc4d4370fd31e",
+        "rev": "ac873f681c3a83d2d4385c4a42812b374e19903a",
         "type": "github"
       },
       "original": {
-        "owner": "ners",
-        "ref": "nixos-25-11",
+        "owner": "garnix-io",
         "repo": "nixos-compose",
         "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1766651565,
-        "narHash": "sha256-QEhk0eXgyIqTpJ/ehZKg9IKS7EtlWxF3N7DXy42zPfU=",
+        "lastModified": 1769018530,
+        "narHash": "sha256-MJ27Cy2NtBEV5tsK+YraYr2g851f3Fl1LpNHDzDX15c=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "3e2499d5539c16d0d173ba53552a4ff8547f4539",
+        "rev": "88d3861acdd3d2f0e361767018218e51810df8a1",
         "type": "github"
       },
       "original": {
@@ -325,6 +355,7 @@
       "inputs": {
         "dashi": "dashi",
         "hs-opentelemetry": "hs-opentelemetry",
+        "miso-graphql": "miso-graphql",
         "nixos-compose": "nixos-compose",
         "nixpkgs": "nixpkgs",
         "servant-effectful": "servant-effectful"
@@ -424,6 +455,7 @@
     },
     "web-font-mdi": {
       "inputs": {
+        "ghc-source-gen": "ghc-source-gen",
         "mdi": [
           "dashi",
           "mdi"
@@ -434,11 +466,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1760476982,
-        "narHash": "sha256-cAI06jFZMVpOGc1ST6QE13UcgSQCDVk2IFZNPnZW4yo=",
+        "lastModified": 1768292899,
+        "narHash": "sha256-7ZVUVRWn1Uvq51dEIItnUIIhAevQjqB5PRwXitEfKIk=",
         "owner": "ners",
         "repo": "web-font-mdi",
-        "rev": "d27445551da07b18c6d300e81d23c4658a43cc53",
+        "rev": "7cb587ca67f1ccbf77153a986ca2a44331b0e779",
         "type": "github"
       },
       "original": {

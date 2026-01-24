@@ -107,4 +107,5 @@ executable quail-server
   other-modules:
     Quail.Server.Files
     Quail.Server.Gql
+    Quail.Server.Resolve
     Quail.Server.SQLite

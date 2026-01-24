@@ -55,6 +55,7 @@ library
   import: common
   hs-source-dirs: src
   cpp-options: -DGQL_SCHEMA_FILE="assets/schema.gql"
+  ghc-options: -ddump-splices
   build-depends:
     aeson,
     base,
@@ -66,7 +67,6 @@ library
     openapi3,
     servant,
     servant-openapi3,
-    servant-swagger-ui,
     servant-swagger-ui-core,
     template-haskell,
     text,

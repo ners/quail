@@ -5,16 +5,17 @@ module OpenTelemetry.Internal.Common.Types.Aeson where
 import Data.Aeson.Key qualified as Key
 import Data.Aeson.KeyMap qualified as KeyMap
 import Data.Aeson.Types
+import Data.HashMap.Strict (HashMap)
 import Data.HashMap.Strict qualified as HashMap
 import Data.Scientific (floatingOrInteger)
+import Data.Text (Text)
 import Data.Vector qualified as Vector
 import OpenTelemetry.Internal.Common.Types
 import Prelude
-import Data.HashMap.Strict (HashMap)
-import Data.Text (Text)
 
 objectToAnyValueMap :: Object -> HashMap Text AnyValue
-objectToAnyValueMap o = HashMap.fromList $
+objectToAnyValueMap o =
+    HashMap.fromList $
         [ (Key.toText key, valueToAnyValue val)
         | (key, val) <- KeyMap.toList o
         ]

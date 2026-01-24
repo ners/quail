@@ -4,6 +4,7 @@ type Url {
 }
 
 type Query {
+	isStubAvailable(stub: String!): Boolean!
 	getAllUrls: [Url!]!
 	getUrlByStub(stub: String!): Url
 }

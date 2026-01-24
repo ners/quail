@@ -3,6 +3,8 @@
 module Quail.Server.Files where
 
 import Control.Monad.Extra (ifM)
+import Data.List qualified as List
+import Data.Maybe (fromMaybe)
 import Effectful
 import Effectful.FileSystem (FileSystem, doesDirectoryExist, doesFileExist)
 import System.FilePath ((</>))
@@ -13,7 +15,7 @@ import Prelude
 #endif
 
 inRootDir :: FilePath -> FilePath
-inRootDir = (ROOT_DIR </>)
+inRootDir f = ROOT_DIR </> fromMaybe f (List.stripPrefix "/" f)
 
 staticFile :: (FileSystem :> es) => FilePath -> Eff es (Maybe FilePath)
 staticFile (inRootDir -> f) = ifM (doesFileExist f) (pure $ Just f) (pure Nothing)

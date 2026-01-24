@@ -2,17 +2,13 @@
 
 module Main where
 
-import Control.Applicative ((<|>))
 import Control.Lens.Operators ((.~))
-import Control.Monad (guard)
-import Control.Monad.Extra (fromMaybeM)
 import Data.Aeson.Types (ToJSON (..), (.=))
 import Data.Aeson.Types qualified as Aeson
 import Data.ByteString (ByteString)
 import Data.ByteString.Builder qualified as Builder
 import Data.ByteString.Lazy qualified as LazyByteString
 import Data.CaseInsensitive qualified as CI
-import Data.Either.Extra (eitherToMaybe)
 import Data.Function ((&))
 import Data.Morpheus (App)
 import Data.Morpheus.Server (httpPlayground)
@@ -25,14 +21,29 @@ import Data.Text.Encoding qualified as Text
 import Data.Text.Lazy.Encoding qualified as LazyText
 import Effectful
 import Effectful.Error.Static (Error, HasCallStack, runErrorWith)
-import Effectful.Haxl (Haxl, haxl, runHaxl)
-import Effectful.NonDet (NonDet, OnEmptyPolicy (OnEmptyKeep), emptyEff, runNonDet)
+import Effectful.FileSystem (FileSystem, runFileSystem)
+import Effectful.Haxl (Haxl, runHaxl)
 import Effectful.OpenTelemetry.Log
 import Effectful.OpenTelemetry.Trace
 import Effectful.Servant.Generic (runWarpServerSettingsContext)
-import Network.HTTP.Types (queryToQueryText, status200, status301, status405, statusCode)
+import GHC.Generics (Generic)
+import Network.HTTP.Types
+    ( queryToQueryText
+    , status200
+    , status301
+    , status405
+    , statusCode
+    )
 import Network.Mime (defaultMimeLookup)
-import Network.Wai (Request (..), Response, ResponseReceived, responseFile, responseHeaders, responseLBS, responseStatus)
+import Network.Wai
+    ( Request (..)
+    , Response
+    , ResponseReceived
+    , responseFile
+    , responseHeaders
+    , responseLBS
+    , responseStatus
+    )
 import Network.Wai qualified as Request
 import Network.Wai.Handler.Warp (defaultSettings, setHost, setPort)
 import Network.Wai.Handler.WebSockets (websocketsOr)
@@ -41,21 +52,26 @@ import OpenTelemetry.Trace (InstrumentationLibrary)
 import Quail.Api
 import Quail.Server.Files (inRootDir)
 import Quail.Server.Gql (gqlApp)
+import Quail.Server.Resolve
+import Quail.Server.SQLite (UrlEntity (UrlEntity))
 import Quail.Server.SQLite qualified as SQLite
 import Servant (ServerError)
 import Servant.Server (Context (..))
 import Servant.Server.Generic (AsServerT)
 import Servant.Swagger.UI (swaggerSchemaUIServerT)
-import System.Directory.Extra (doesDirectoryExist, doesFileExist)
 import System.FilePath (takeFileName)
 import System.Metrics qualified as EKG
 import System.Metrics.Prometheus.Encode.Text qualified as Prometheus
 import System.Metrics.Prometheus.MetricId qualified as Labels
-import System.Metrics.Prometheus.Registry qualified as Prometheus (Registry, sample)
-import System.Metrics.Prometheus.RegistryT qualified as Prometheus (execRegistryT)
+import System.Metrics.Prometheus.Registry qualified as Prometheus
+    ( Registry
+    , sample
+    )
+import System.Metrics.Prometheus.RegistryT qualified as Prometheus
+    ( execRegistryT
+    )
 import System.Remote.Monitoring.Prometheus qualified as Prometheus
 import Prelude
-import GHC.Generics (Generic)
 
 showBs :: ByteString -> Text
 showBs = either (Text.pack . show) id . Text.decodeUtf8'
@@ -105,30 +121,40 @@ gqlServer publish gqlApp =
         , query = httpPubApp publish gqlApp
         }
 
-data RequestLog = RequestLog { message :: Text, request :: Request }
+data RequestLog = RequestLog {message :: Text, request :: Request}
     deriving stock (Generic)
     deriving anyclass (ToJSON)
 
 fileServer
     :: forall es
-     . (HasCallStack, Haxl :> es, Tracing :> es, Logging :> es, IOE :> es)
+     . ( HasCallStack
+       , FileSystem :> es
+       , Haxl :> es
+       , Tracing :> es
+       , Logging :> es
+       , IOE :> es
+       )
     => Request
     -> (Response -> IO ResponseReceived)
     -> Eff es ResponseReceived
 fileServer request respond =
-    inSpan ("fileServer:" <> stub) spanArguments
-        . fromMaybeM (sendFile index)
-        . fmap eitherToMaybe
-        . runNonDet OnEmptyKeep
-        $ checkInvalidMethod
-            <|> tryServePath
-            <|> tryServeDirectory
-            <|> tryRedirect
+    inSpan ("fileServer:" <> stub) spanArguments $
+        if requestMethod request `notElem` ["GET", "HEAD"]
+            then do
+                log_ Trace RequestLog{message = "Invalid method", request} mempty
+                sendPlain status405 [] "Only GET or HEAD is supported"
+            else
+                resolve stub >>= \case
+                    Nothing -> sendFile index
+                    Just Directory{} -> do
+                        log_ Trace RequestLog{message = "Invalid directory request", request} mempty
+                        sendFile index
+                    Just (File f) -> sendFile f
+                    Just (Entity UrlEntity{..}) -> sendPlain status301 [("Location", Text.encodeUtf8 target)] ""
   where
     spanArguments = defaultSpanArguments{kind = Server}
-    stub = Text.intercalate "/" $ Request.pathInfo request
+    stub = Text.intercalate "/" . filter (not . Text.null) $ Request.pathInfo request
     index = inRootDir "index.html"
-    path = if stub == "/" then index else inRootDir (Text.unpack stub)
 
     sendPlain status headers =
         liftIO . respond . responseLBS status (("Content-Type", "text/plain") : headers)
@@ -138,29 +164,11 @@ fileServer request respond =
         let mimetype = defaultMimeLookup . fromString . takeFileName $ f
          in liftIO . respond $ responseFile status200 [("Content-Type", mimetype)] f Nothing
 
-    checkInvalidMethod, tryServePath, tryServeDirectory, tryRedirect :: Eff (NonDet ': es) ResponseReceived
-    checkInvalidMethod = do
-        guard $ requestMethod request `notElem` ["GET", "HEAD"]
-        log_ Trace RequestLog{ message = "Invalid method", request } mempty
-        sendPlain status405 [] "Only GET or HEAD is supported"
-
-    tryServePath = do
-        guard =<< (liftIO . doesFileExist) path
-        inject $ sendFile path
-
-    tryServeDirectory = do
-        guard =<< (liftIO . doesDirectoryExist) path
-        log_ Trace RequestLog{ message = "Invalid directory request", request } mempty
-        inject $ sendFile index
-
-    tryRedirect = do
-        SQLite.UrlEntity{..} <- fromMaybeM emptyEff . haxl $ SQLite.getUrlByStub stub
-        sendPlain status301 [("Location", Text.encodeUtf8 target)] ""
-
 server
     :: forall e es
      . ( HasCallStack
        , PubApp e
+       , FileSystem :> es
        , Haxl :> es
        , Tracing :> es
        , Logging :> es
@@ -197,14 +205,17 @@ main = do
     let instrumentationLibrary :: InstrumentationLibrary
         instrumentationLibrary = "quail-server"
     runEff
+        . runFileSystem
         . runHaxl haxlEnv
         . runMainDefaultLogging instrumentationLibrary
         . runMainDefaultTracing instrumentationLibrary
         $ do
             (wsApp, publish) <- runErrorWith @ServerError undefined $ webSocketsApp gqlApp
-            let settings = setHost "*6" . setPort 8081 $ defaultSettings
+            let settings = setHost "*6" . setPort 8080 $ defaultSettings
                 middleware = websocketsOr defaultConnectionOptions wsApp
-                routes :: QuailDocumentedAPI (AsServerT (Eff '[Error ServerError, Tracing, Logging, Haxl, IOE]))
+                routes
+                    :: QuailDocumentedAPI
+                        (AsServerT (Eff '[Error ServerError, Tracing, Logging, Haxl, FileSystem, IOE]))
 
                 routes = server registry [inject . publish] gqlApp
                 context = EmptyContext
